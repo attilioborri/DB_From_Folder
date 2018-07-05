@@ -10,3 +10,15 @@ C:\Documents and Settings\Admin\Documenti\Visual Studio 2005\Projects\DBFromFold
 C:\Documents and Settings\Admin\Documenti\Visual Studio 2005\Projects\DBFromFolder\DBFromFolder\obj\Release\DBFromFolder.Form1.resources
 C:\Documents and Settings\Admin\Documenti\Visual Studio 2005\Projects\DBFromFolder\DBFromFolder\obj\Release\DBFromFolder.Properties.Resources.resources
 C:\Documents and Settings\Admin\Documenti\Visual Studio 2005\Projects\DBFromFolder\DBFromFolder\obj\Release\DBFromFolder.csproj.GenerateResource.Cache
+C:\Documents and Settings\Admin\Documenti\DB_From_Folder\DBFromFolder\DBFromFolder\obj\Debug\DBFromFolder.exe
+C:\Documents and Settings\Admin\Documenti\DB_From_Folder\DBFromFolder\DBFromFolder\obj\Debug\DBFromFolder.pdb
+C:\Documents and Settings\Admin\Documenti\DB_From_Folder\DBFromFolder\DBFromFolder\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Admin\Documenti\DB_From_Folder\DBFromFolder\DBFromFolder\obj\Debug\DBFromFolder.Form1.resources
+C:\Documents and Settings\Admin\Documenti\DB_From_Folder\DBFromFolder\DBFromFolder\obj\Debug\DBFromFolder.Properties.Resources.resources
+C:\Documents and Settings\Admin\Documenti\DB_From_Folder\DBFromFolder\DBFromFolder\obj\Debug\DBFromFolder.csproj.GenerateResource.Cache
+C:\Documents and Settings\Admin\Documenti\DB_From_Folder\DBFromFolder\DBFromFolder\bin\Debug\DBFromFolder.exe
+C:\Documents and Settings\Admin\Documenti\DB_From_Folder\DBFromFolder\DBFromFolder\bin\Debug\DBFromFolder.pdb
+C:\Documents and Settings\Admin\Documenti\DB_From_Folder\DBFromFolder\DBFromFolder\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Admin\Documenti\DB_From_Folder\DBFromFolder\DBFromFolder\obj\Release\DBFromFolder.Form1.resources
+C:\Documents and Settings\Admin\Documenti\DB_From_Folder\DBFromFolder\DBFromFolder\obj\Release\DBFromFolder.Properties.Resources.resources
+C:\Documents and Settings\Admin\Documenti\DB_From_Folder\DBFromFolder\DBFromFolder\obj\Release\DBFromFolder.csproj.GenerateResource.Cache

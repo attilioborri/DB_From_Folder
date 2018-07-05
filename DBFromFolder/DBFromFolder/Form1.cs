@@ -10,23 +10,29 @@ namespace DBFromFolder
 {
     public partial class Form1 : Form
     {
+        private string pathtoscan;
         public Form1()
         {
             InitializeComponent();
+            pathtoscan = " ";
+            labelpath.Text = "";
         }
 
         private void FolderSelector_Click(object sender, EventArgs e)
         {
-            string selectedpath=" ";
+            
             using (FolderBrowserDialog SelectedFolder = new FolderBrowserDialog())
             {
                 //selectedpath = SelectedFolder.SelectedPath.ToString()
                 if (SelectedFolder.ShowDialog() == DialogResult.OK)   
                 {  
-                    selectedpath = SelectedFolder.SelectedPath;  
+                    pathtoscan = SelectedFolder.SelectedPath;
+
+                    // Nel label scrivo solo la cartella foglia del percorso specificato
+                    labelpath.Text = pathtoscan.Split('\\')[pathtoscan.Split('\\').Length-1];
                 }  
             }
-            MessageBox.Show(selectedpath);
+            
         }
     }
 }

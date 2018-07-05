@@ -29,6 +29,7 @@ namespace DBFromFolder
         private void InitializeComponent()
         {
             this.FolderSelector = new System.Windows.Forms.Button();
+            this.labelpath = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // FolderSelector
@@ -41,23 +42,35 @@ namespace DBFromFolder
             this.FolderSelector.UseVisualStyleBackColor = true;
             this.FolderSelector.Click += new System.EventHandler(this.FolderSelector_Click);
             // 
+            // labelpath
+            // 
+            this.labelpath.AutoSize = true;
+            this.labelpath.Location = new System.Drawing.Point(135, 21);
+            this.labelpath.Name = "labelpath";
+            this.labelpath.Size = new System.Drawing.Size(35, 13);
+            this.labelpath.TabIndex = 1;
+            this.labelpath.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(422, 236);
+            this.Controls.Add(this.labelpath);
             this.Controls.Add(this.FolderSelector);
             this.MaximumSize = new System.Drawing.Size(430, 270);
             this.MinimumSize = new System.Drawing.Size(430, 270);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button FolderSelector;
+        private System.Windows.Forms.Label labelpath;
 
     }
 }
