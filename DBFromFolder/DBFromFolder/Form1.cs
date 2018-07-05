@@ -23,6 +23,9 @@ namespace DBFromFolder
             
             using (FolderBrowserDialog SelectedFolder = new FolderBrowserDialog())
             {
+                // Si può solo selezionare un percorso, non aggiungere nuove cartelle.
+                SelectedFolder.ShowNewFolderButton = false;
+
                 //selectedpath = SelectedFolder.SelectedPath.ToString()
                 if (SelectedFolder.ShowDialog() == DialogResult.OK)   
                 {  
