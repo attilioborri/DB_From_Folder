@@ -16,6 +16,7 @@ namespace DBFromFolder
             InitializeComponent();
             pathtoscan = " ";
             labelpath.Text = "";
+            ComboBox_FileFormat.SelectedIndex = 2;
         }
 
         private void FolderSelector_Click(object sender, EventArgs e)
@@ -36,6 +37,32 @@ namespace DBFromFolder
                 }  
             }
             
+        }
+
+        private void analyse_and_save(object sender, EventArgs e)
+        {
+            
+            
+            switch (ComboBox_FileFormat.SelectedIndex)
+            {
+                case 0:
+                    //Access
+                    break;
+                case 1:
+                    // MySQL
+                    break;
+                case 2:
+                    // TXT
+                    break;
+                case 3:
+                    // CSV
+                    break;
+                case 4:
+                    //Excel
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
