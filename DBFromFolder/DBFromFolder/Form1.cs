@@ -63,6 +63,31 @@ namespace DBFromFolder
                 default:
                     break;
             }
+            //MessageBox.Show(pathtoscan);
+            string command = string.Concat(string.Concat("/C \"dir /s/b/o:gn \"", pathtoscan),"\"\"");
+            MessageBox.Show(command);
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.UseShellExecute = false;
+            startInfo.RedirectStandardOutput = true;
+            startInfo.FileName = "CMD.exe";
+            startInfo.Arguments = command;
+            process.StartInfo = startInfo;
+            process.Start();
+            //string output = process.StandardOutput.ReadToEnd();
+            //string lineoutput = process.StandardOutput.ReadLine();
+            string output="";
+            string standard_output = "";
+            while ((standard_output = process.StandardOutput.ReadLine()) != null)
+            {
+                //MessageBox.Show(output);
+                output = string.Concat(string.Concat(output, "\n"), process.StandardOutput.ReadLine());
+            }
+            
+            process.WaitForExit();
+            MessageBox.Show(output);
+            
+
         }
     }
 }

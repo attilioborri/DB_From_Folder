@@ -30,16 +30,10 @@ namespace DBFromFolder
         {
             this.FolderSelector = new System.Windows.Forms.Button();
             this.labelpath = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.ComboBox_FileFormat = new System.Windows.Forms.ComboBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // FolderSelector
@@ -61,52 +55,18 @@ namespace DBFromFolder
             this.labelpath.TabIndex = 1;
             this.labelpath.Text = "FolderName";
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 42);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(398, 143);
-            this.tabControl1.TabIndex = 2;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.ComboBox_FileFormat);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(390, 117);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "FS - DB Manager";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
             // ComboBox_FileFormat
             // 
             this.ComboBox_FileFormat.FormattingEnabled = true;
             this.ComboBox_FileFormat.Items.AddRange(new object[] {
             "Access",
-            "MySQL",
             "TXT",
             "CSV",
             "Excel"});
-            this.ComboBox_FileFormat.Location = new System.Drawing.Point(7, 7);
+            this.ComboBox_FileFormat.Location = new System.Drawing.Point(13, 61);
             this.ComboBox_FileFormat.Name = "ComboBox_FileFormat";
             this.ComboBox_FileFormat.Size = new System.Drawing.Size(121, 21);
             this.ComboBox_FileFormat.TabIndex = 0;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.AutoScroll = true;
-            this.tabPage2.Controls.Add(this.checkedListBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(390, 117);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Configurazione";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // checkedListBox1
             // 
@@ -117,7 +77,7 @@ namespace DBFromFolder
             "CR2",
             "MOV",
             "MP4"});
-            this.checkedListBox1.Location = new System.Drawing.Point(7, 7);
+            this.checkedListBox1.Location = new System.Drawing.Point(172, 61);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(90, 94);
             this.checkedListBox1.TabIndex = 0;
@@ -126,7 +86,7 @@ namespace DBFromFolder
             // 
             this.button1.Location = new System.Drawing.Point(12, 201);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 23);
+            this.button1.Size = new System.Drawing.Size(249, 23);
             this.button1.TabIndex = 3;
             this.button1.Text = "Analizza e salva";
             this.button1.UseVisualStyleBackColor = true;
@@ -134,28 +94,26 @@ namespace DBFromFolder
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(13, 188);
+            this.progressBar1.Location = new System.Drawing.Point(12, 175);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(395, 10);
+            this.progressBar1.Size = new System.Drawing.Size(249, 20);
             this.progressBar1.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(422, 236);
+            this.ClientSize = new System.Drawing.Size(292, 236);
+            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.ComboBox_FileFormat);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.labelpath);
             this.Controls.Add(this.FolderSelector);
-            this.MaximumSize = new System.Drawing.Size(430, 270);
-            this.MinimumSize = new System.Drawing.Size(430, 270);
+            this.MaximumSize = new System.Drawing.Size(300, 270);
+            this.MinimumSize = new System.Drawing.Size(300, 270);
             this.Name = "Form1";
             this.Text = "DBFromFS";
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,9 +123,6 @@ namespace DBFromFolder
 
         private System.Windows.Forms.Button FolderSelector;
         private System.Windows.Forms.Label labelpath;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.ComboBox ComboBox_FileFormat;
         private System.Windows.Forms.Button button1;
