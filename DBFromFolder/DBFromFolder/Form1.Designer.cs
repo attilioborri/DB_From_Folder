@@ -31,7 +31,7 @@ namespace DBFromFolder
             this.FolderSelector = new System.Windows.Forms.Button();
             this.labelpath = new System.Windows.Forms.Label();
             this.ComboBox_FileFormat = new System.Windows.Forms.ComboBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.ExtensionsListBox = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
@@ -68,19 +68,19 @@ namespace DBFromFolder
             this.ComboBox_FileFormat.Size = new System.Drawing.Size(121, 21);
             this.ComboBox_FileFormat.TabIndex = 0;
             // 
-            // checkedListBox1
+            // ExtensionsListBox
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.ExtensionsListBox.FormattingEnabled = true;
+            this.ExtensionsListBox.Items.AddRange(new object[] {
             "MP3",
             "JPG",
             "CR2",
             "MOV",
             "MP4"});
-            this.checkedListBox1.Location = new System.Drawing.Point(172, 61);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(90, 94);
-            this.checkedListBox1.TabIndex = 0;
+            this.ExtensionsListBox.Location = new System.Drawing.Point(172, 61);
+            this.ExtensionsListBox.Name = "ExtensionsListBox";
+            this.ExtensionsListBox.Size = new System.Drawing.Size(90, 94);
+            this.ExtensionsListBox.TabIndex = 0;
             // 
             // button1
             // 
@@ -104,7 +104,7 @@ namespace DBFromFolder
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 236);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.ExtensionsListBox);
             this.Controls.Add(this.ComboBox_FileFormat);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button1);
@@ -123,7 +123,7 @@ namespace DBFromFolder
 
         private System.Windows.Forms.Button FolderSelector;
         private System.Windows.Forms.Label labelpath;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox ExtensionsListBox;
         private System.Windows.Forms.ComboBox ComboBox_FileFormat;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ProgressBar progressBar1;
