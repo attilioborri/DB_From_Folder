@@ -151,8 +151,10 @@ namespace DBFromFolder
                         String[] pathelements = line.Split("\\".ToCharArray());
                         for (int i = pathelements.Length-1; i >0; i--)
                         {
-                            String.Concat(csvout,pathelements[i]);
+                            csvout = String.Concat(csvout,pathelements[i]);
+                            csvout = String.Concat(csvout, ";");
                         }
+                        csvout = String.Concat(csvout, System.Environment.NewLine);
                     }
                     SaveFileDialog CSVsaveFileDialog = new SaveFileDialog();
                     //CSVsaveFileDialog.Filter = "*.csv";
