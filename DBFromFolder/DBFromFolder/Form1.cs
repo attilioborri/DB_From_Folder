@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace DBFromFolder
 {
@@ -110,6 +111,7 @@ namespace DBFromFolder
                     {
                         //MessageBox.Show(output);
                         output = String.Concat(String.Concat(output, standard_output), System.Environment.NewLine);
+                        //output = Regex.Split(output,pathtoscan.Split('\\')[pathtoscan.Split('\\').Length - 1])[1].ToString();
                     }
                     process.WaitForExit();
                 }
@@ -147,20 +149,36 @@ namespace DBFromFolder
                     String[] lines = output.Split(System.Environment.NewLine.ToCharArray());
                     String csvout = "";
                     progressBar1.Increment(33);
+                    int maxsubfolders = 0;
                     foreach(String line in lines){
                         String[] pathelements = line.Split("\\".ToCharArray());
+                        if (pathelements.Length > maxsubfolders)
+                        {
+                            maxsubfolders = pathelements.Length;
+                        }
                         for (int i = pathelements.Length-1; i >0; i--)
                         {
                             csvout = String.Concat(csvout,pathelements[i]);
                             csvout = String.Concat(csvout, ";");
                         }
                         csvout = String.Concat(csvout, System.Environment.NewLine);
+                        //csvout = String.Concat(csvout, "\n");
                     }
                     SaveFileDialog CSVsaveFileDialog = new SaveFileDialog();
                     //CSVsaveFileDialog.Filter = "*.csv";
                     CSVsaveFileDialog.DefaultExt="csv";
                     CSVsaveFileDialog.RestoreDirectory = true;
+
+                    String firstline = "File;";
+                    for (int i = 2; i < maxsubfolders; i++)
+                    {
+                        firstline = String.Concat(firstline, String.Concat(String.Concat("Folder ", (maxsubfolders - i).ToString()), ";"));
+                    }
+                    firstline = String.Concat(firstline, System.Environment.NewLine);
                     if(CSVsaveFileDialog.ShowDialog()==DialogResult.OK){
+                        csvout = String.Concat(firstline, csvout);
+                        // Remove empty lines
+                        csvout = Regex.Replace(csvout, @"^\s+$[\r\n]*", string.Empty, RegexOptions.Multiline);
                         File.WriteAllText(Path.GetFullPath(CSVsaveFileDialog.FileName),csvout);
                     }
                     progressBar1.Increment(34);
@@ -172,7 +190,7 @@ namespace DBFromFolder
                     break;
             }
 
-            
+            progressBar1.Value = 0;
         }
     }
 }
